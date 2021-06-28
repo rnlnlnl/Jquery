@@ -28,8 +28,19 @@
 			return col[index];
 		});
 		
+		// 속성을 여러개 적용 (글자색, 배경색 변경)
+		$("h2").css({
+			color : 'green',
+			backgroundColor: 'yellow'
+		});
 		
-		
+		// 속성을 여러개 적용(글자색, 배경색) + 배경색을 배열을 사용해서 처리
+		$("h2").css({
+			color: "silver",
+			backgroundColor : function (index) {
+				return col[index];
+			}
+		});
 		
 	});
 	
