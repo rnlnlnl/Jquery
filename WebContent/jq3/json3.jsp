@@ -6,7 +6,7 @@
 <%@page import="java.sql.DriverManager"%>
 <%@ page language="java" contentType="application/json; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<script src="../js/jquery-3.6.0.js"></script>
+
 
 <%
 	// DB에서 정보를 가져오기
@@ -50,17 +50,7 @@
 
 	<%=memberList%>
 
-<script type="text/javascript">
-	$.getJSON('memberList',function(data){
-		
-		$.each(data,function(idx,item){
-			$('body').append(item.id);
-		});
-		
-	});
-	
-	
-</script>
+
 
 
 

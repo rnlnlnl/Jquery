@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		
+		// 비동기 방식으로 생성된 DB정보 (JSON데이터)
+		$.getJSON('json3.jsp',function(data){
+			//console.log(data);
+			//alert(data);
+			$.each(data,function(idx,item){
+				
+				$('body').append(item.id+"/"+item.pass+"/"+item.reg_date+"<br>");
+				
+			});
+			
+		});
+		
+	});
+	
+	// 무조건 적인 ajax처리는 컴퓨터 로딩이 느려진다.
+	
+</script>
+</head>
+<body>
+	<h1>WebContent/jq3/json3.html</h1>
+</body>
+</html>
